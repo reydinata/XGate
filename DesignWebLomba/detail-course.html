@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard Fitness</title>
+  <link rel="stylesheet" type="text/css" href="detail-course.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <nav>
+    <div class="logo">
+      <h4>Power House </h4><img id="img-logo" src="img/ic_electric-removebg-preview.png" alt="">
+    </div>
+    <ul id="nav-list">
+        
+        <li id="dashboard"><a href="dashboard.html">Home</a></li>
+        <li id="course"><a href="course.html">Course</a></li>
+        <li id="about"><a href="">About</a></li>
+        <li id="profile"><a href="profile.html">Profile</a></li>
+        <li id="logout"><a href="index.html">Logout</a></li>
+    </ul>
+
+    <!-- <div class="menu-toggle">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div> -->
+  </nav>
+  
+  <div class="grid-container">
+    <div class="title-challenge">Challenge 30 Days<br>
+    Day 1</div>
+    <div class="workout">Workout / day<br>
+        <input type="checkbox" id="Deadlift" name="Deadlift" >
+        <label class="repetisi" for="Deadlift">Running 2 km</label>
+        <button id="scan" onclick="camera()">Scan Me</button><br>
+        <input type="checkbox" id="Deadlift" name="Deadlift" >
+        <label class="repetisi" for="Deadlift">Bungee Jumping 3x12 repetisi</label>
+        <button id="scan" onclick="camera()">Scan Me</button><br>
+        <input type="checkbox" id="Deadlift" name="Deadlift" >
+        <label class="repetisi" for="Deadlift">Pushup 2x12 repetisi</label>
+        <button id="scan" onclick="camera()">Scan Me</button><br>
+        <input type="checkbox" id="Deadlift" name="Deadlift">
+        <label class="repetisi" for="Deadlift">Squat 2x12 repetisi</label>
+        <button id="scan" onclick="camera()">Scan Me</button><br></div>  
+    <div class="scanning">Scan Gerakan Kamu<br>
+        <video id="video-element" autoplay></video>
+    <br> </div>
+    <div class="recipe"><p class="recipe-title">Food You Must Eat</p>
+    <p class="listfood">Sarapan:
+        <br>
+        1. Telur rebus
+        <br>
+        2. Irisan alpukat
+        <br>
+        3. Roti gandum panggang
+        <br>
+        4. Teh hijau tanpa gula
+        <br>
+        Snack Pagi:
+        <br>
+        1. Sejumput kacang almond
+        <br>
+        Makan Siang:
+        <br>
+        1. Sayur salad dengan campuran selada, mentimun, tomat, dan wortel
+        <br>
+        2. Dada ayam panggang tanpa kulit
+        <br>
+        3. Quinoa atau nasi merah
+        <br>
+        4. Minum air putih
+        <br>
+        Snack Sore:
+        <br>
+        1. Smoothie buah dengan campuran pisang, bayam, dan almond milk
+        <br>
+        Makan Malam:
+        <br>
+        1. Ikan salmon / Tuna panggang
+        <br>
+        2. Brokoli dan kembang kol kukus
+        <br>
+        3. Kentang panggang
+        <br>
+        4. Minum air putih</p></div>
+  </div>
+  
+  <script>
+function camera(){
+    navigator.mediaDevices.getUserMedia({ video: true })
+            .then(function (stream) {
+                var videoElement = document.getElementById('video-element');
+                videoElement.srcObject = stream;
+                
+            })
+            .catch(function (error) {
+                console.error('Error accessing webcam:', error);
+            });
+}
+    
+  </script> 
+</body>
+</html>

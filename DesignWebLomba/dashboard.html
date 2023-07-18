@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard Fitness</title>
+  <link rel="stylesheet" type="text/css" href="dashboard.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  
+  <nav>
+    <div class="logo">
+      <h4>Power House </h4><img id="img-logo" src="img/ic_electric-removebg-preview.png" alt="">
+    </div>
+    <ul id="nav-list">
+        
+        <li id="dashboard"><a href="dashboard.html">Home</a></li>
+        <li id="course"><a href="course.html">Course</a></li>
+        <li id="about"><a href="">About</a></li>
+        <li id="profile"><a href="profile.html">Profile</a></li>
+        <li id="logout"><a href="index.html">Logout</a></li>
+    </ul>
+
+    <!-- <div class="menu-toggle">
+        <input type="checkbox">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div> -->
+  </nav>
+  
+  
+  <div class="container">
+    <div class="summary"> 
+      <h2 id="title-summary">Status Summary</h2>
+      <!-- <img id="person" src="img/imgbin_man-beard-computer-icons-male-png.png" alt=""> -->
+      <div id="weight">
+        <p id="title-weight">Weight</p>
+        <div id="weight-cm"><b>85</b> kg</div>
+      </div>
+      <div id="height">
+        <p id="title-height">Height</p>
+        <p id="height-cm"><b>176</b>  cm</p>
+      </div>
+      <div id="bmi">
+        <p id="title-bmi">Your BMI Score : </p>
+        <p id="bmi-score"><b>27,4</b> </p>
+      </div>
+      <p id="bmi-explanation">Your BMI is 27.4, which means you are classified as Overweight. 
+        To achieve the ideal weight your BMI must be in range of 18,5 - 24,99</p>
+    </div>
+
+
+    <div class="calorie">
+      <h2 id="title-calorie">Nutrition Guide</h2>
+      <p id="calorie-explanation">Based on your stats, the best estimate for your calories intake per day is</p>
+      <div id="maintenance">
+        <p id="title-maintenance">Maintenance</p>
+        <p id="calorie-maintenance"><b>2,875</b> calories per day</p>
+      </div>
+      <div id="cutting">
+        <p id="title-cutting">Cutting</p>
+        <p id="calorie-cutting"><b>2,375</b> calories per day</p>
+      </div>
+      <div id="bulking">
+        <p id="title-bulking">Bulking</p>
+        <p id="calorie-bulking"><b>3,375</b> calories per day</p>
+      </div>
+
+      <div id="macronutrient">
+          <h2 id="title-macronutrient">Macronutrient Details</h2>
+        
+          <h3 id="title-macro-maintenance">Maintenance</h3>
+          <p id="maintenance-explanation">These macronutrient values reflect your maintenance calories of 2,875 calories per day.</p>
+          <p id="maintenance-moderate">Moderate Carb</p>
+          <div id="main-moderate-content">
+            <div class="protein">
+              <p class="content-g">216g</p>
+              <p class="content">protein</p>
+            </div>
+            <div class="fats">
+              <p class="content-g">112g</p>
+              <p class="content">fats</p>
+            </div>
+            <div class="carbs">
+              <p class="content-g">252g</p>
+              <p class="content">carbs</p>
+            </div>
+          </div>
+
+          <p id="maintenance-lower">lower Carb</p>
+          <div id="main-lower-content">
+            <div class="protein">
+              <p class="content-g">288g</p>
+              <p class="content">protein</p>
+            </div>
+            <div class="fats">
+              <p class="content-g">128g</p>
+              <p class="content">fats</p>
+            </div>
+            <div class="carbs">
+              <p class="content-g">144g</p>
+              <p class="content">carbs</p>
+            </div>
+          </div>
+
+          <p id="maintenance-higher">Higher Carb</p>
+          <div id="main-higher-content">
+            <div class="protein">
+              <p class="content-g">216g</p>
+              <p class="content">protein</p>
+            </div>
+            <div class="fats">
+              <p class="content-g">64g</p>
+              <p class="content">fats</p>
+            </div>
+            <div class="carbs">
+              <p class="content-g">359g</p>
+              <p class="content">carbs</p>
+            </div>
+          </div>
+
+          <h3 id="title-macro-cutting">Cutting</h3>
+          <p id="cutting-explanation">These macronutrient values reflect your cutting calories of 2,375 calories per day, which is a 500 calorie per day deficit from your maintenance of 2,875 calories per day.</p>
+          <p id="cutting-moderate">Moderate Carb</p>
+          <div id="cut-moderate-content">
+            <div class="protein">
+              <p class="content-g">178g</p>
+              <p class="content">protein</p>
+            </div>
+            <div class="fats">
+              <p class="content-g">92g</p>
+              <p class="content">fats</p>
+            </div>
+            <div class="carbs">
+              <p class="content-g">208g</p>
+              <p class="content">carbs</p>
+            </div>
+          </div>
+
+          <p id="cutting-lower">lower Carb</p>
+          <div id="cut-lower-content">
+            <div class="protein">
+              <p class="content-g">238g</p>
+              <p class="content">protein</p>
+            </div>
+            <div class="fats">
+              <p class="content-g">106g</p>
+              <p class="content">fats</p>
+            </div>
+            <div class="carbs">
+              <p class="content-g">119g</p>
+              <p class="content">carbs</p>
+            </div>
+          </div>
+
+          <p id="cutting-higher">Higher Carb</p>
+          <div id="cut-higher-content">
+            <div class="protein">
+              <p class="content-g">178g</p>
+              <p class="content">protein</p>
+            </div>
+            <div class="fats">
+              <p class="content-g">53g</p>
+              <p class="content">fats</p>
+            </div>
+            <div class="carbs">
+              <p class="content-g">297g</p>
+              <p class="content">carbs</p>
+            </div>
+          </div>
+
+
+          <h3 id="title-macro-bulking">Bulking</h3>
+          <p id="bulking-explanation">These macronutrient values reflect your bulking calories of 3,375 calories per day, which is +500 calories per day from your maintenance of 2,875 calories per day.</p>
+          <p id="bulking-moderate">Moderate Carb</p>
+          <div id="bulk-moderate-content">
+            <div class="protein">
+              <p class="content-g">178g</p>
+              <p class="content">protein</p>
+            </div>
+            <div class="fats">
+              <p class="content-g">53g</p>
+              <p class="content">fats</p>
+            </div>
+            <div class="carbs">
+              <p class="content-g">297g</p>
+              <p class="content">carbs</p>
+            </div>
+          </div>
+
+          <p id="bulking-lower">lower Carb</p>
+          <div id="bulk-lower-content">
+            <div class="protein">
+              <p class="content-g">178g</p>
+              <p class="content">protein</p>
+            </div>
+            <div class="fats">
+              <p class="content-g">53g</p>
+              <p class="content">fats</p>
+            </div>
+            <div class="carbs">
+              <p class="content-g">297g</p>
+              <p class="content">carbs</p>
+            </div>
+          </div>
+
+
+          <p id="bulking-higher">Higher Carb</p>
+          <div id="bulk-higher-content">
+            <div class="protein">
+              <p class="content-g">178g</p>
+              <p class="content">protein</p>
+            </div>
+            <div class="fats">
+              <p class="content-g">53g</p>
+              <p class="content">fats</p>
+            </div>
+            <div class="carbs">
+              <p class="content-g">297g</p>
+              <p class="content">carbs</p>
+            </div>
+          </div>
+      </div>   
+    </div>
+
+    <div class="workout">
+      <h2 id="title-workout">Reccomended Challenge workout</h2>
+      <h3 id="title-option1">1 months Challenge</h3>
+      <div id="option1-monday">
+        <p class="day">Monday</p>
+        <p class="workout-name">30-minute jog in the park</p>
+      </div>
+      <div id="option1-tuesday">
+        <p class="day">Tuesday</p>
+        <p class="workout-name">45-minute weightlifting session at the gym</p>
+      </div>
+      <div id="option1-wednesday">
+        <p class="day">Wednesday</p>
+        <p class="workout-name">1-hour yoga class</p>
+      </div>
+      <div id="option1-thursday">
+        <p class="day">Thursday</p>
+        <p class="workout-name">Rest day</p>
+      </div>
+      <div id="option1-friday">
+        <p class="day">Friday</p>
+        <p class="workout-name">20-minute home HIIT (High-Intensity Interval Training) cardio</p>
+      </div>
+      <div id="option1-saturday">
+        <p class="day">Saturday</p>
+        <p class="workout-name">1-hour outdoor cycling</p>
+      </div>
+      <div id="option1-sunday">
+        <p class="day">Sunday</p>
+        <p class="workout-name">Rest day</p>
+      </div>
+
+
+      <h3 id="title-option2">14 days Challenge</h3>
+      <div id="option2-monday">
+        <p class="day">monday</p>
+        <p class="workout-name">20-minute home HIIT cardio</p>
+      </div>
+      <div id="option2-tuesday">
+        <p class="day">tuesday</p>
+        <p class="workout-name">45-minute Pilates session</p>
+      </div>
+      <div id="option2-wednesday">
+        <p class="day">wednesday</p>
+        <p class="workout-name">Rest day</p>
+      </div>
+      <div id="option2-thursday">
+        <p class="day">thursday</p>
+        <p class="workout-name">40-minute weightlifting session at the gym</p>
+      </div>
+      <div id="option2-friday">
+        <p class="day">friday</p>
+        <p class="workout-name">30-minute jog in the park</p>
+      </div>
+      <div id="option2-saturday">
+        <p class="day">saturday</p>
+        <p class="workout-name">40-minute swimming session</p>
+      </div>
+      <div id="option2-sunday">
+        <p class="day">sunday</p>
+        <p class="workout-name">1-hour yoga class</p>
+      </div>
+
+    </div>
+
+    <div class="recipes">
+      <h2 id="title-recipes">Recipes</h2>
+      <div id="recipes-content">
+        <div id="breakfast">
+          <p id="title-breakfast">Breakfast</p>
+          <ul id="list-breakfast">
+            <li>Oatmeal with fresh fruit slices and honey</li>
+            <li>Hard-boiled eggs with whole wheat toast and sliced avocado</li>
+            <li>Spinach smoothie with banana, low-fat yogurt, and chia seeds</li>
+          </ul>
+        </div>
+  
+        <div id="lunch">
+          <p id="title-lunch">Lunch</p>
+          <ul id="list-lunch">
+            <li>Green salad with grilled chicken slices, tomatoes, cucumbers, and low-fat dressing.</li>
+            <li>Stir-fried vegetables with tofu or tempeh, using a small amount of olive oil.</li>
+            <li>Brown rice with grilled or steamed fish, served with steamed vegetables.</li>
+          </ul>
+        </div>
+  
+        <div id="dinner">
+          <p id="title-dinner">Dinner</p>
+          <ul id="list-dinner">
+            <li>Grilled tofu or tempeh with roasted vegetables (such as bell peppers, zucchini, and carrots).</li>
+            <li>Boiled beef with steamed potatoes and broccoli.</li>
+            <li>Vegetable sushi with brown rice and a variety of vegetables like cucumber, carrot, and avocado.</li>
+          </ul>
+        </div>
+      </div>
+      </div>
+      
+  
+  </div> 
+  <script src="script.js">$()</script>
+</body>
+</html>

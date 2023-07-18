@@ -1,0 +1,144 @@
+*{
+    margin:0;
+    padding:0;
+  }
+  body{
+    background-image:url("img/bacground.webp");
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .container {
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+
+
+  /* navigation */
+  nav{
+    background-color: #065990;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    height:50px;
+    
+  }
+  #nav-list{
+    position: absolute;
+    right: 90px;;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+  }
+  #nav-list #logout,#dashboard,#course,#about,#profile{
+    margin: 5px;
+  }
+  
+  nav #logo{
+    position: relative;
+  }
+  h4{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-weight: bold;
+  }
+
+  #img-logo{
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    left: 130px;
+  }
+
+  nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+  }
+  /* navigation */
+  #div1 {
+    background-color: white;
+    width: 97%;
+    border-radius: 10px;
+    text-align: center;
+   margin-left: 20px;
+   margin-top: 10px;
+   padding-bottom: 20px;
+   margin-bottom: 10px;
+    
+}
+#div2 {
+  background-color: #065990;
+    width: 70%;
+    display: inline-block;
+    text-align: left;
+    padding: 10px;
+    
+    border-radius: 10px;
+    margin-top: 10px;
+}
+#profile-picture {
+    display: block;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#name-label,
+#address-label,
+#email-label,
+#phone-label,
+#weight-label,
+#height-label {
+    display: block;
+    margin-top: 10px;
+}
+#name-input,
+#address-input,
+#email-input,
+#phone-input,
+#weight-input,
+#height-input {
+    width: 95%;
+    padding: 5px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
+}
+ #save-button{
+position: relative;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  width: 40%;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+}
+  
+  #save-button:hover {
+    background-color: #008CBA;
+    color: white;
+  }
+#save-button a{
+  color: black;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+    
+  
+ 

@@ -1,0 +1,799 @@
+  *{
+    margin:0;
+    padding:0;
+  }
+  body{
+    background-image:url("img/bacground.webp");
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .container {
+    /* max-width: 1000px; */
+    margin: 0 auto;
+    padding: 20px;
+    
+  }
+
+
+  /* navigation */
+  nav{
+    background-color: #065990;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    height:50px;
+    
+  }
+  #nav-list{
+    position: absolute;
+    right: 90px;;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+  }
+  #nav-list #logout,#dashboard,#course,#about,#profile{
+    margin: 5px;
+  }
+  
+  nav #logo{
+    position: relative;
+  }
+  h4{
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-weight: bold;
+  }
+
+  #img-logo{
+    position: absolute;
+    width: 30px;
+    top: 10px;
+    left: 130px;
+  }
+
+  nav ul li a{
+    color: white;
+    text-decoration: none;
+    font-style: normal;
+  }
+  /* navigation */
+
+
+
+  .container{
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.25fr 0.75fr 0.5fr;
+    grid-template-areas:"summary activity"
+                        "workout activity"
+                        "recipes recipes";
+  }
+  
+/* ringkasan kesehatan */
+  .summary{
+    background-color: rgb(255, 255, 255);
+    grid-area: summary;
+    height: fit-content;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 0.05fr 0.25fr 0.25fr 0.25fr;
+    grid-template-areas:"title-summary title-summary"
+                        "height weight"
+                        "bmi bmi"
+                        "explanation explanation"
+                        ;
+  }
+  #title-summary{
+    grid-area: title-summary;
+    color: #065990;
+    text-shadow: 1px 1px 3px #065990;
+    text-align: center;
+  }
+  #height{
+    grid-area: height;
+    background-color: #065990;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+    color: white;
+    margin: 10px;
+    box-shadow: 2px 2px 5px black;
+    
+  }
+  #weight{
+    /* position: absolute; */
+    grid-area: weight;
+    background-color: #065990;
+    height: 100px;
+    padding: 10px;
+    border-radius: 10px; 
+    font-size: 25px;
+    color: white;
+    margin:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #bmi{
+    grid-area: bmi;
+    background-color: #065990;
+    height: 100px;
+    border-radius: 10px; 
+    font-size: 20px;
+    color: white;
+    margin:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #title-height{
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    
+  }
+  #height-cm{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  #title-weight{
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+    
+  }
+  #weight-cm{
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+  #title-bmi{
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+  }
+  #bmi-score{
+    width: 100%;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+  }
+  #bmi-explanation{
+    grid-area: explanation;
+    margin: 10px;
+    text-align: justify;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+  }
+    
+    /* ringkasan kesehatan */
+
+
+/* asupan nutrisi */
+  .calorie{
+    background-color: rgb(255, 255, 255);
+    grid-area: activity;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black;
+    display: grid;
+    /* height: fit-content; */
+    grid-auto-flow: column;
+    grid-auto-flow: row;
+    /* grid-template-rows: 0.10fr 0.10fr 0.5fr 2fr; */
+    grid-template-areas:"title-calorie title-calorie title-calorie"
+                        "explanation explanation explanation"
+                        "maintenance cutting bulking"
+                        "macronutrient macronutrient macronutrient"
+                        ;
+  }
+  #title-calorie{
+    grid-area: title-calorie;
+    color: #065990;
+    text-shadow: 1px 1px 3px #065990;
+    text-align: center;
+    height: fit-content;
+  }
+  #calorie-explanation{
+    grid-area: explanation;
+    /* height:30px; */
+    margin: 10px;
+    text-align: justify;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+  }
+
+  #maintenance{
+    grid-area: maintenance;
+    background-color: #065990;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px; 
+    font-size: 20px;
+    color: white;
+    margin:10px;
+    box-shadow: 2px 2px 5px rgb(0, 0, 0);
+  }
+
+  #maintenance #title-maintenance{
+  
+    text-align: center;
+    margin-top: 10px;
+    
+  }
+
+  #maintenance #calorie-maintenance{
+    
+      text-align: center;
+      margin-top: 10px;
+      margin-left:20px ;
+      margin-right: 20px;
+  }
+
+  #cutting{
+    grid-area: cutting;
+    background-color: #065990;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px; 
+    font-size: 20px;
+    color: white;
+    margin:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+
+  #cutting #title-cutting{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #cutting #calorie-cutting{
+    text-align: center;
+    margin-top: 10px;
+    margin-left:10px ;
+    margin-right: 10px;
+  }
+
+  #bulking{
+    grid-area: bulking;
+    background-color: #065990;
+    height: fit-content;
+    padding: 10px;
+    border-radius: 10px; 
+    font-size: 20px;
+    color: white;
+    margin:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+
+  #bulking #title-bulking{
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  #bulking #calorie-bulking{
+    text-align: center;
+    margin-top: 10px;
+    margin-left:10px ;
+    margin-right: 10px;
+  }
+
+  #macronutrient{
+    grid-area: macronutrient;
+    margin: 10px;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-rows: 0.25fr 0.15fr 0.15fr 0.15fr 1fr 0.25fr   0.15fr 0.15fr 0.15fr 1fr 0.25fr   0.15fr 0.15fr 0.15fr 1fr;
+    grid-template-areas:"title-macro title-macro title-macro"
+                        "macroMaintenance macroMaintenance macroMaintenance"
+                        "maintenance-explanation maintenance-explanation maintenance-explanation"
+                        "main-moderate main-lower main-higher"
+                        "main-moderate-content main-lower-content main-higher-content"
+                        ". . ."
+                        "macroCutting macroCutting macroCutting"
+                        "cutting-explanation cutting-explanation cutting-explanation"
+                        "cut-moderate cut-lower cut-higher"
+                        "cut-moderate-content cut-lower-content cut-higher-content"
+                        ". . ."
+                        "macroBulking macroBulking macroBulking"
+                        "bulking-explanation bulking-explanation bulking-explanation"
+                        "bulk-moderate bulk-lower bulk-higher"
+                        "bulk-moderate-content bulk-lower-content bulk-higher-content"
+                        ;
+    grid-gap: 0.5em;
+  }
+
+  #title-macronutrient{
+    color: #065990;
+    text-shadow: 1px 1px 3px #065990;
+    grid-area:title-macro;
+    text-align: center;
+  }
+  #title-macro-maintenance{
+    color: #065990;
+    text-shadow: 1px 1px 3px #065990;
+    grid-area: macroMaintenance;
+    text-align: center;
+  }
+  #title-macro-cutting{
+    color: #065990;
+    text-shadow: 1px 1px 3px #065990;
+    grid-area: macroCutting;
+    text-align: center;
+  }
+  #title-macro-bulking{
+    color: #065990;
+    text-shadow: 1px 1px 3px #065990;
+    grid-area: macroBulking;
+    text-align: center;
+  }
+
+  #maintenance-explanation{
+    grid-area: maintenance-explanation;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+    text-align: justify;
+  }
+  #cutting-explanation{
+    grid-area: cutting-explanation;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+    text-align: justify;
+  }
+  #bulking-explanation{
+    grid-area: bulking-explanation;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+    text-align: justify;
+  }
+
+  
+  #cut-lower-content{
+    grid-area:cut-lower-content;
+    background-color: #065990;
+    color: white;
+    border-radius: 10px ;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #cut-higher-content{
+    grid-area: cut-higher-content;
+    background-color: #065990;
+    color: white;
+    border-radius: 10px ;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #cut-moderate-content{
+    grid-area: cut-moderate-content;
+    background-color: #065990;
+    color: white;
+    border-radius: 10px ;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+  }
+
+  #main-lower-content{
+    grid-area:main-lower-content;
+    background-color: #065990;
+    color: white;
+    border-radius: 10px ;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #main-higher-content{
+    grid-area: main-higher-content;
+    background-color: #065990;
+    color: white;
+    border-radius: 10px ;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #main-moderate-content{
+    grid-area: main-moderate-content;
+    background-color: #065990;
+    color: white;
+    border-radius: 10px ;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+  }
+
+  #bulk-lower-content{
+    grid-area:bulk-lower-content;
+    background-color: #065990;
+    color: white;
+    border-radius: 10px ;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #bulk-higher-content{
+    grid-area: bulk-higher-content;
+    background-color: #065990;
+    color: white;
+    border-radius: 10px ;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #bulk-moderate-content{
+    grid-area: bulk-moderate-content;
+    background-color: #065990;
+    color: white;
+    border-radius: 10px ;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 2px 2px 5px black;
+  }
+
+  .content-g{
+    font-weight: bold;
+  }
+
+  .content{
+    grid-area: content;
+  }
+
+  .protein{
+    border-bottom: 1px solid white;
+    margin: 10px;
+  }
+  .fats{
+    border-bottom: 1px solid white;
+    margin: 10px;
+  }
+  .carbs{
+    border-bottom: 1px solid white;
+    margin: 10px;
+  }
+  #maintenance-moderate{
+    grid-area: main-moderate;
+    text-align: center;
+    height: fit-content;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+  }
+  #maintenance-lower{
+    grid-area: main-lower;
+    text-align: center;
+    height: fit-content;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+  }
+  #maintenance-higher{
+    grid-area: main-higher;
+    text-align: center;
+    height: fit-content;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+  }
+  #cutting-moderate{
+    grid-area: cut-moderate;
+    height: fit-content;
+    text-align: center;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+  }
+  #cutting-lower{
+    height: fit-content;
+    grid-area: cut-lower;
+    text-align: center;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+  }
+  #cutting-higher{
+    height: fit-content;
+    grid-area: cut-higher;
+    text-align: center;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+  }
+  #bulking-moderate{
+    grid-area: bulk-moderate;
+    text-align: center;
+    height: fit-content;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+  }
+  #bulking-lower{
+    grid-area: bulk-lower;
+    text-align: center;
+    height: fit-content;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+  }
+  #bulking-higher{
+    grid-area: bulk-higher;
+    text-align: center;
+    height: fit-content;
+    color: #065990;
+    text-shadow: 1px 1px 9px black;
+  }
+  /* asupan kalori */
+
+  
+  .workout{
+    background-color: rgb(255, 255, 255);
+    grid-area: workout;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black;
+    /* justify-content: center; */
+    /* width: 100%; */
+    height: fit-content;
+    display: grid;
+    grid-auto-flow: column;
+    /* grid-auto-flow: row; */
+    grid-template-rows: 0.5fr 0.25fr 1fr 1fr 1fr 0.25fr  0.25fr 1fr 1fr 1fr;
+    grid-template-areas:
+                        "title-workout title-workout title-workout"
+                        ". title-option1 ."
+                        "opt1-monday opt1-tuesday opt1-wednesday" 
+                        "opt1-thursday opt1-friday opt1-saturday" 
+                        ". opt1-sunday ." 
+                        ". . ."
+                        ".title-option2."
+                        "opt2-monday opt2-tuesday opt2-wednesday" 
+                        "opt2-thursday opt2-friday opt2-saturday" 
+                        ".opt2-sunday." 
+                        ;
+    /* grid-gap: 0.5em; */
+    /* position: relative; */
+                      
+  }
+  #title-workout{
+    grid-area: title-workout;
+    color: #065990;
+    text-shadow: 1px 1px 3px #065990;
+    text-align: center;
+  }
+  #title-option1{
+    color: #065990;
+    text-shadow: 1px 1px 3px #065990;
+ 
+    text-align: center;
+    grid-area: title-option1;
+  }
+  #title-option2{
+    color: #065990;
+    text-shadow: 1px 1px 3px #065990;
+    text-align: center;
+    grid-area: title-option2;
+  }
+
+  #option1-monday{
+    grid-area: opt1-monday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option1-tuesday{
+    grid-area: opt1-tuesday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option1-wednesday{
+    grid-area: opt1-wednesday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option1-thursday{
+    grid-area: opt1-thursday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option1-friday{
+    grid-area: opt1-friday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option1-saturday{
+    grid-area: opt1-saturday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option1-sunday{
+    grid-area: opt1-sunday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+
+
+  #option2-monday{
+    grid-area: opt2-monday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option2-tuesday{
+    grid-area: opt2-tuesday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option2-wednesday{
+    grid-area: opt2-wednesday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option2-thursday{
+    grid-area: opt2-thursday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option2-friday{
+    grid-area: opt2-friday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option2-saturday{
+    grid-area: opt2-saturday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+  #option2-sunday{
+    grid-area: opt2-sunday;
+    background-color: #065990;
+    width: fit-content;
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+  }
+
+  .day{
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  .workout-name{
+    width:200px;
+    text-align: center;
+    color: white;
+  }
+  
+
+  .recipes{
+    background-color: rgb(255, 255, 255);
+    grid-area: recipes;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px black;
+    justify-content: center;
+    width: fit-content;
+    display: grid;
+    position: absolute;
+    left: 400px;
+  }
+  #title-recipes{
+    color: #065990;
+    text-shadow: 1px 1px 3px #065990;
+    text-align: center;
+    margin: 10px;
+  }
+  #recipes-content{
+    background-color: #065990;
+    color: white;
+    border-radius:10px;
+    box-shadow: 2px 2px 5px black;
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin: 10px;
+  }
+  #breakfast{
+    
+    /* width: fit-content; */
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    
+    
+  }
+  #lunch{
+    /* width: fit-content; */
+    padding: 10px;
+    height: 100px;
+    margin: 10px;
+    
+  }
+  #dinner{
+  
+    /* width: fit-content; */
+    padding: 10px;
+    height: fit-content;
+    margin: 10px;
+
+  }
+
+  #title-lunch, #title-breakfast, #title-dinner{
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+ 
+
+
+  
